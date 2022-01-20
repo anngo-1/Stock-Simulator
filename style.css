@@ -1,0 +1,46 @@
+@font-face {
+    font-family: roboto;
+  src: url('Roboto-Medium.ttf');
+   font-weight: normal;
+    font-style: normal;
+}
+body {
+  background-color:#252525;
+  color:white;
+  font-family:roboto;
+
+}
+
+#TitleImage{
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2.5%;
+  width: 25%;
+  
+}
+
+#CheckStocksButton {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2.5%;
+  width: 25%;
+
+
+}
+
+
+.allah {
+
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  margin-top: 2.5%;
+  font-size: 50px;
+    
+
+
+}
+

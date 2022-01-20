@@ -1,0 +1,178 @@
+@font-face {
+    font-family: roboto;
+  src: url('Roboto-Medium.ttf');
+   font-weight: normal;
+    font-style: normal;
+}
+
+body {
+   background-color:#252525;
+  color:white;
+  font-family: roboto;
+  font-style: normal;
+
+}
+.TestButton1 {
+  z-index: 20;
+  position:fixed;
+  left: 37.2%;
+  bottom: 35%;
+
+}
+#kk {
+  position: fixed;
+  height:15vh;
+  width:30vw;
+  bottom:0;
+  right:0; 
+}
+button:hover {
+   background: #27dd02;
+}
+
+.buttonsell:hover {
+  background: #fc0404;
+}
+
+.Chart {
+  position: fixed;
+  height: 60vh;
+  bottom: 25%;
+  left: 50%;
+  /* width: 50%; */
+  width:40vw;
+  /* display: flex; */
+}
+
+button:active {
+    transform: scale(0.99);
+}
+.button {
+ border: none;
+
+  margin: 0;
+  text-decoration: none;
+  background: #252525;
+  color: #ffffff;
+  font-family: sans-serif;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, 
+              transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  
+  height:15%; 
+  width: 35%;
+  font-size: 1.5vh;
+}
+.buttonsell {
+ border: none;
+
+  margin: 0;
+  text-decoration: none;
+  background: #252525;
+  color: #ffffff;
+  font-family: sans-serif;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, 
+              transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  
+  height:15%; 
+  width: 35%;
+  font-size: 1.5vh;
+}
+.Stocks1 {
+  justify-content:space-between;
+}
+
+.AllStocks{
+  display:flex;
+  flex-direction: column;
+
+  z-index:0;
+white-space: pre-line;
+ position: fixed; 
+ top: 2.5%;
+ left:10%;
+ height:90vh; 
+ width: 80vh;
+ text-align:left;
+ font-size: 2.6vh;
+
+}
+
+.Balance {
+  white-space: pre-line;
+ position: absolute; 
+ top: 0; 
+ right: 0; 
+ width: 50%; 
+ margin:5px;
+ text-align:right;
+ font-size: 4vh;
+}
+
+
+.Quant {
+display: flex;
+    position: fixed;
+    flex-direction: column;
+    left: 35%;
+    top: 13%;
+    gap: 13vmin;
+    /* align-content: center; */
+    z-index: 50;
+  
+}
+
+.Photos {
+display: flex;
+    position: fixed;
+    flex-direction: column;
+    left: 1%;
+    top: 0;
+    gap: 1vh;
+    width: 14vh;
+    height: 14vh;
+    /* align-content: center; */
+    z-index: 51;
+  
+}
+
+#fname {
+
+   width: 1.5vw;
+    height:1.5vh;
+    text-align:center;
+}
+#fname1 {
+ width: 1.5vw;
+    height:1.5vh;
+    text-align:center;
+}
+#fname2 {
+   width: 1.5vw;
+    height:1.5vh;
+    text-align:center;
+}
+
+#fname3 {
+   width: 1.5vw;
+    height:1.5vh;
+    text-align:center;
+}
+#fname4 {
+   width: 1.5vw;
+    height:1.5vh;
+    text-align:center;
+}
+#fname5 {
+   width: 1.5vw;
+    height:1.5vh;
+    text-align:center;
+}
+
