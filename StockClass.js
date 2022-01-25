@@ -113,17 +113,19 @@ class Stock {
       let x = Math.floor((Math.random() * 100) + 1);
       let randomvalue = (Math.floor((Math.random() *3) + 1));
       let floorvalue = this.originalprice /  Math.floor((Math.random() * 5) + 1);
-      if (x < 35) {
-        this.price = this.price + ((this.originalprice / 10) * randomvalue);
+      if (x < 60) {
+        this.price = this.price + (this.price / 40);
       }
-      if (x > 35) {
-        this.price = this.price - ((this.originalprice / 10) * randomvalue);
-        if (this.price < 24) {
+      if (x > 60) {
+        this.price = this.price - (this.originalprice / 15);
+        if (this.price < 22) {
           console.log("ran");
-          this.price = 24;
+          this.price = 22;
         }
       }
-    } 
+      
+    }
+    
   }
 
   quantity() {

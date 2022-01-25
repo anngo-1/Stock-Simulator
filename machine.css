@@ -25,6 +25,10 @@ body {
   width:30vw;
   bottom:0;
   right:0; 
+  
+}
+#kk:hover {
+  content:url("Images/nextDay2.png") ;
 }
 button:hover {
    background: #27dd02;

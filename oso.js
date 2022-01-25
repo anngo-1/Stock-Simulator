@@ -76,7 +76,7 @@ for (let i = 0; i<quantarr.length;i++) {
 // initial call to set to 1
 quantities(stocks,quantarr);
 
-function updatetext(holding) {
+function updatetext(holding) { //update text functions changed color and text of elements also if up/down
   let inc;
  if (disneystock.increase() > 0) {
    stock5.style.color = "#27dd02";
@@ -114,7 +114,7 @@ function updatetext(holding) {
    osostocktext.style.color = "#fc0404";
  }
 
-
+// spam text content to display beginning prices, holding worth, and holding shares
 stock5.textContent = disneystock.print();  
 stock4.textContent = pearstock.print();
 stock3.textContent = gooblestock.print();
@@ -164,19 +164,19 @@ var income = new Chart(ctx, {
         backgroundColor: "rgba(255, 0, 0, 0.2)",
         borderColor: "grey",
         borderWidth: 3,
-        lineTension:  0.3,
+        lineTension:  0.4,
       
       
       }
     ]
     
   
-  },
+  }, //chart options 
           options: {
             responsive: true,
             maintainAspectRatio: false,
             scales: {
-              y: { 
+              y: { //create ticks 
                 ticks: {
                    callback: function(value, index, values) {
                         return '$' + value;
@@ -198,6 +198,7 @@ var income = new Chart(ctx, {
  
 });
 
+// update chart after everyday with new balance/day
 function addData(chart, label, data) {
     chart.data.labels.push(label);
     chart.data.datasets.forEach((dataset) => {
@@ -208,13 +209,13 @@ function addData(chart, label, data) {
 
 
 
-// initial call
+// initial call to initialize chart at day 0 with initial balance
 addData(income, 0,+(balance));
 
 
 
 
-// next day button
+// next day button/function pass in update text
 
 function nextday(updatetext) {
  let holdingbal = 0; 
@@ -222,13 +223,13 @@ function nextday(updatetext) {
 day++;
 for (let i = 0; i<stocks.length;i++) {
   stocks[i].adv();
-
-  holdingbal += stocks[i].holding();
+  holdingbal += stocks[i].holding(); 
+  // go thru each stock in array and advance the price + add their price to the holding balance
   stocks[i].print();
   console.log(stocks[i].buyquantity);
 
 }
-
+//check if networth all time is lower than initial, if lower change to red, if higher change to green
 if (balance+holdingbal > initial) {
  income.data.datasets[0].borderColor = 'green';
  income.update();
@@ -240,10 +241,10 @@ if (balance+holdingbal > initial) {
  income.update();
 }
 updatetext(holdingbal); 
-console.log(balance+holdingbal);
+console.log(balance+holdingbal); //debug
 addData(income,day,Math.round(balance+holdingbal));
  
-
+//debug
 console.log("current net worth as of day " + day + ": " + (balance+holdingbal));
 }
 
